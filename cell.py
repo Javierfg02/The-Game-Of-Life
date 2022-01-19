@@ -1,3 +1,4 @@
+from re import S
 import pygame
 
 pygame.init() 
@@ -25,6 +26,3 @@ class Cell:
         cell = pygame.Rect(self.x*self.width, self.y*self.height, self.width-1, self.height-1)
             
         pygame.draw.rect(self.surface, color, cell)
-
-    def set_state(self, state):
-        self.state = state

@@ -25,13 +25,14 @@ class Grid:
         for x in range(self.rows):
             for y in range(self.cols):
                 self.grid[x][y] = Cell(self.surface, x, y, self.cell_width, self.cell_height, random.randint(0, 1))
-    
-    def copy_grid(self) -> np.ndarray:
-        grid = np.ndarray(shape=(self.rows, self.cols), dtype=Cell)
-        for x in range(self.rows):
-            for y in range(self.cols):
-                grid[x][y] = self.grid[x][y]
-        return grid
+                
+    def animate_cell(self, position:tuple) -> None:
+        row = position[0]//int(self.cell_width)
+        col = position[1]//int(self.cell_height)
+        if self.grid[row][col].state == DEAD:
+            self.grid[row][col].state = ALIVE
+            self.grid[row][col].draw_cell()
+            pygame.display.update()
         
     def count_neighbours(self, x:int, y:int) -> int:
         total = 0 # this variable is used to sum up the states of the neighbouring cells
@@ -64,5 +65,4 @@ class Grid:
                 else:
                     copy_grid[x][y] = copy_grid[x][y] = Cell(self.surface, x, y, self.cell_width, self.cell_height, state)
         
-        self.grid = copy_grid
-  
+        self.grid = copy_grid # Make the grid equal the copy grid so the display updates
