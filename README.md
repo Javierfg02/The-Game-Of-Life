@@ -19,3 +19,7 @@ While the game is a zero player game, interaction with the program is possible. 
 * MOUSE CLICK: Changes the state of a dead cell to a live cell.
 
 To experiment with the possible patterns that are formed in the Game Of Life it is recommended to pause the game by pressing P and then changing the state of dead cells by clicking on them with the mouse.
+
+A GIF of the project is attached below:
+
+![The Game Of Life](https://github.com/Javierfg02/The-Game-Of-Life/blob/master/game%20of%20life.gif)
