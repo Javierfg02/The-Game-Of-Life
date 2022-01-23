@@ -55,8 +55,7 @@ def main() -> None:
         if not paused:
             draw_window(grid)
     
-    pygame.quit()
-        
+    pygame.quit()   
     
 if __name__ == '__main__':
     main() 
