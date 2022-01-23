@@ -23,3 +23,7 @@ To experiment with the possible patterns that are formed in the Game Of Life it 
 A GIF of the project is attached below:
 
 ![The Game Of Life](https://github.com/Javierfg02/The-Game-Of-Life/blob/master/game%20of%20life.gif)
+
+## Contact me
+
+You can always shoot me an email at javier.fergarcia@gmail.com :).
